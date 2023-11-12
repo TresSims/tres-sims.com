@@ -36,7 +36,7 @@ theme = "blist"
 [params]
    # Basic Parameters
    introTitle = "Hey! I'm Tres Sims"
-   introSubtitle = "Computer Graphics Tools Artist"
+   introSubtitle = "I'm a Technical Artist with a love for procedural design, emerging technology, and shader development."
    introPhoto = "/picture.jpg"
    logo = "/logo.svg"
 
@@ -101,12 +101,12 @@ theme = "blist"
   [[params.homepage.social.icons]]
     website = "github"
     url = "https://github.com/TresSims"
-  [[params.homepage.social.icons]]
-    website = "youtube"
-    url = "https://youtube.com"
+  # [[params.homepage.social.icons]]
+  #   website = "youtube"
+  #   url = "https://youtube.com"
   [[params.homepage.social.icons]]
     website = "instagram"
-    url = "https://instagram.com"
+    url = "https://instagram.com/tsims.95"
 
 [[menu.main]]
   name = "About"
