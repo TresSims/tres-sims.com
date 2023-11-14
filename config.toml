@@ -93,7 +93,7 @@ theme = "blist"
 [params.homepage.social]
   # Global params common for both languages
   title = "Follow me"
-  description = "I've got interesting work shared accross all my socials"
+  description = "I've got interesting work shared across all my socials"
 
   [[params.homepage.social.icons]]
     website = "linkedin"
