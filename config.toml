@@ -15,7 +15,7 @@ theme = "blist"
 #       logo = "/blist-logo.png"
 #     [[languages.en.menu.main]]
 #         name = "Blog"
-#         url = "blog"
+        url = "blog"
 #         weight = 1
 
 #     [[languages.en.menu.main]]
@@ -71,7 +71,7 @@ theme = "blist"
   hilightColor = "teal-400"
 
   # The page bundles that are shown on the front page
-  bundles = ["Tools", "Shaders", "Software"]
+  bundles = ["Projects"]
 
   # Used to hide the post metadata such as posted date, reading time and word count
   # Can be used at site level or page level

@@ -1,6 +1,6 @@
 ---
-title:  'Standalone 3MF Packager / Mesh Inspector'
-date: 2023-11-10
+title:  'Meh: A Standalone 3MF Packager / Mesh Inspector'
+date: 2022-07-05
 description: "A tool for ensuring quality of 3D files and prints"
 thumbnail: /meh/thumbnail.png
 ---
