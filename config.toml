@@ -38,7 +38,7 @@ theme = "blist"
    introTitle = "Hey! I'm Tres Sims"
    introSubtitle = "I'm a Technical Artist with a love for procedural design, emerging technology, and shader development."
    introPhoto = "/picture.jpg"
-   logo = "/logo.svg"
+   logo = "/logo.png"
 
   # Enable the darkmode toggle in header
   darkModeToggle = false
