@@ -28,7 +28,7 @@ into three sections, one to control the shattered plains, one to control the sur
 mountains, and one to create the warcamps.
 
 
-For the plains, I knew I would wanted to be able to control where they were generated,
+For the plains, I knew I wanted to be able to control where they were generated,
 how many plains were created, and how deep and wide the caverns between each plain was. 
 Eventually, I ended up wit the graph and paramteres below. 
 
@@ -41,7 +41,7 @@ Eventually, I ended up wit the graph and paramteres below.
 Next, I went to work on creating some mountainous terrain for the shattered plains to be 
 nestled in. I knew the inspiration for this terrain was Zion national park and Bryce 
 Canyon national park, so I tried to make mountains that were flattened out, almost like 
-canyons themselves, with lots of heat erosion. 
+canyons, with lots of heat erosion. 
 
 
 ||

@@ -2,7 +2,7 @@
 title: 'Customizable Damaged Wallpaper'
 date: 2023-11-13
 thumbnail: /WallpaperShader/thumbnail.png
-description: "A distressed wallpaper shader made in substance desginer, with customizable paramters"
+description: "A distressed wallpaper shader made in substance desginer, with customizable parameters"
 ---
 
 A few years ago I made a [demo]({{< ref "ARBoardGameDemo.md" >}}) to showcase how AR 
