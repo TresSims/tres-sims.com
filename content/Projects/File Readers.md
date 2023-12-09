@@ -1,11 +1,11 @@
 ---
-title:  'File Readers'
+title: 'Houdini Compatibility plugins for Uncommon mesh and volume formats'
 date: 2022-11-10
-description: "A series of file formatters for Houdini"
+description: "Importing medical data into Houdini is not a common task, over my time in 
+the medical industry, I created file importers for .3MF files, .NRRD files, and .dcm 
+files using python"
 thumbnail: /HoudiniFileReaders/thumbnail.png
 ---
-
-<!--more-->
 
 During my time developing workflows for DASH, I sometimes found that it was beneficial
 to be able to custom roll my own file readers. Whether it was implementing cutting edge
