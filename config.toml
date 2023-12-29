@@ -47,6 +47,9 @@ googleAnalytics = "G-EZJJXQ8M60"
   # Enable search in header
   enableSearch = true
 
+  # Enable floating return to top widget
+  enableFloatingReturnToTop = true
+
   # Option to customize the search parameters of a page
   # Below are the supported options; Note that including entire content
   # may slowdown the loading of search results
