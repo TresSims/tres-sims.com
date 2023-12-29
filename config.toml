@@ -2,6 +2,7 @@ baseurl = "https://tres-sims.com"
 metaDataFormat = "yaml"
 title = "Tres Sims"
 theme = "blist"
+googleAnalytics = "G-EZJJXQ8M60"
 
 # [languages]
 #   [languages.en]
