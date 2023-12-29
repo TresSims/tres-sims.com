@@ -16,7 +16,7 @@ googleAnalytics = "G-EZJJXQ8M60"
 #       logo = "/blist-logo.png"
 #     [[languages.en.menu.main]]
 #         name = "Blog"
-        url = "blog"
+        # url = "blog"
 #         weight = 1
 
 #     [[languages.en.menu.main]]
@@ -110,8 +110,14 @@ googleAnalytics = "G-EZJJXQ8M60"
     url = "https://instagram.com/tsims.95"
 
 [[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
   name = "About"
   url = "/about"
+  weight = 2
 
 [build]
   writeStats = true
