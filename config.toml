@@ -37,7 +37,7 @@ googleAnalytics = "G-EZJJXQ8M60"
 [params]
    # Basic Parameters
    introTitle = "Hey! I'm Tres Sims"
-   introSubtitle = "I'm a Technical Artist with a love for procedural design, emerging technology, and shader development."
+   introSubtitle = "Software and Hardware technology engineer with broad integration experience.  Adept full-stack web developer using multiple industry standards including React JS, Python, Postgresql, and others.  Passionate constructor of scalable solutions for account management, helpdesk support, VR/3D integration, additive production, and network administration.  Accomplished custom mobile application developer in Java."
    introPhoto = "/picture.jpg"
    logo = "/logo.png"
 
@@ -66,7 +66,7 @@ googleAnalytics = "G-EZJJXQ8M60"
 
   # Custom copyright - optional
   copyright = "Copyright © 2023 - Tres Sims · All rights reserved"
-  favicon = "/favicon.svg"
+  favicon = "/favicon.ico"
 
   # Color for the intro details and social links block, not applicable for dark mode
   # Supported values: Any color from TailwindCSS default colors
@@ -108,9 +108,9 @@ googleAnalytics = "G-EZJJXQ8M60"
   # [[params.homepage.social.icons]]
   #   website = "youtube"
   #   url = "https://youtube.com"
-  [[params.homepage.social.icons]]
-    website = "instagram"
-    url = "https://instagram.com/tsims.95"
+  # [[params.homepage.social.icons]]
+  #   website = "instagram"
+  #   url = "https://instagram.com/tsims.95"
 
 [[menu.main]]
   name = "Home"

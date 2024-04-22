@@ -4,23 +4,45 @@ date: 2023-11-15
 type: about
 ---
 
-I’m Tres Sims, a highly motivated and experienced technical artist, looking for my next
-big adventure! I have experience creating python tools and standalone software to bring
-the DCC of the simulation industry to 3D printing, and am looking to bring my experience
-to the gaming and simulation industry.
+I’m Tres Sims, a Software and Hardware technology engineer with broad integration experience.  Adept full-stack web developer using multiple industry standards including React JS, Python, Postgresql, and others.  Passionate constructor of scalable solutions for account management, helpdesk support, VR/3D integration, additive production, and network administration.  Accomplished custom mobile application developer in Java.
 
-[Download My Resume](/Resume2023.pdf)
+[Download My Resume](/Resume.pdf)
 
-# Skills
+# Work Experience
 
-|||
-|---|---|---|
-| Houdini | Unreal Engine | Substance Designer |
-| Substance Painter | Maya - [Maya Certified User](https://www.credly.com/badges/3d7797e7-9f13-4b84-af87-f6ca1defdb89/linked_in_profile) | Blender |
-| Adobe Photoshop | Python | Git |
-| Perforce | Javascript | C# |
-|||
+## Software Engineer and IT Specialist @ Digital Anatomy Simulations for Healthcare
 
+- Pioneered IT systems and software development for a cutting-edge technology startup resulting in $2.5M in revenue over three years.
+- Led software development efforts for all projects, including documenting customer and stakeholder requirements, creating project schedules, and delivering on-time solutions.
+   - Designed and wrote software for 3d printing quality control systems using Python and C++ reducing re-prints and failures by 60%, saving thousands of dollars in material and time.
+   - Developed VR (Oculus Quest) and AR (Microsoft Hololens) interactive education solutions for Doctors using Blueprints and C++ in Unreal Engine,  increasing realism and critical retention of lifesaving procedures.
+   - Created mobile applications with Java and Android Studio to communicate via Bluetooth with embedded systems  in 3D printed devices, improving capture  speed  and accuracy of  patient measurements
+   - Built, tested, and deployed RestAPI using Python, integrated custom engineering software with a web-based form for previewing custom-ordered parts.  Hosted engineering software and Python RestAPI on an AWS EC2 instance, caching resulting 3D model parts on an AWS S3 instance.
+- Developed hardware, communication, data flow and security requirements for additive medical 3d printing.
+   - Integrated WooCommerce / WordPress e-commerce platform with Monday.com project management software using Zapier to automate task creation, ensuring minimal time between order placement and production.
+   - Improved remote access to office equipment by setting up secure remote desktop access with NoMachine and Tailscale VPN. This allowed employees to access equipment 24/7, improving manufacturing turnaround times.
+   - Defined user permissions for RBAC and monitored remediated DLP alerts using Google Workplace for Business to ensure employees had appropriate access to company data without compromising security.
+   - Managed DNS rules for company domains using Google Domains, including setting DMARC rules and DNS records to ensure efficient email delivery and website access with minimal errors.
+   - Spearheaded 24-hour employee troubleshooting help desk by creating an automated ticketing system on Monday.com and personally managing all technology issues, ensuring all company technology had 99.5% uptime.
+
+
+## Freelance work
+- Developed and deployed a link-shortening application using NextJS, Django, and PostgreSQL, including a native Android app in Java.
+- Administered Ubuntu servers on cloud providers, including Contabo and AWS EC2, managed firewall rules in UFW, set up backups using Restic and R-Clone, and ran software updates to ensure high availability and security.
+- Managed Docker deployments for custom container registry, web applications, and game servers on an Ubuntu server.
+- Installed a DNS filter on a local area network using PiHole to improve network speed and security, significantly improving network performance.
+Engineered a virtualization server using Dell PowerEdge and PowerVault to provide NAS with TrueNAS and Ubuntu servers for the docker deployment of game servers in a local area network.
+
+
+## Project Leader, Gameplay Software Engineer @ "John's Wizard Dungeon" Game Dev Team
+- Deployed a Perforce version control system on an Ubuntu VPS to facilitate team collaboration, allowing concurrent development of all team members.
+- Coordinated a five-member team creating a VR Escape Room in Unreal Engine, resulting in a published game.
+  - [Play the game for Free!](https://store.steampowered.com/app/1093750/Johns_Wizard_Dungeon/)
+
+
+## Contract Web Designer @ Control Laser Corporation
+- Designed web-ready assets in Adobe Illustrator, Adobe Photoshop, and Adobe Premiere using company style guide to create a cohesive and website layout
+- Developed custom carousel element using PHP and Javascript to display product families conveniently, minimizing clicks required to navigate to company products
 
 ***
 
@@ -31,45 +53,16 @@ to the gaming and simulation industry.
 B.F.A Emerging Media, Experimental Animation
 Minor, Computer Science
 
-- Event Director / Vice President of Game Dev Knights, Student Organization
-- Presented a Mobile VR experience in UCF Fine Arts Gallery, Nova Exhibition
-
-
-***
-
-# Work Experience
-
-## Founder, CIO, Technical Director @ Digital Anatomy Simulations for Healthcare
-
-- Pioneering a cutting edge 3D printing company, developing healthcare solutions for the Central Florida area
-- Identifying workflow needs to reduce errors in polyjet 3D printing file export errors, and improving object creation workflows
-- Created REST API in Python (Flask) for driving Houdini FX scenes from Next JS frontend for display in WebGL environment
-- Created AR training simulations for the Hololens using Unreal Engine
-- Implementing and maintaining development pipelines for software, including PyTest testing, Docker building, VPS deployment, and Documentation
-
-## Research Assistant @ Prototype Development 3D Print Lab
-- Developed and Implemented custom workflow tools using Houdini FX to optimize 3D printed object creation
-- Authored multiple patents on using Computer Graphics Tools to optimize and improve the quality of cutting edge polyjet 3D Printing
-
-## Project Leader @ John's Wizard Dungeon Team
-- Set up a perforce version control system on a VPS to facilitate collaboration in my team
-- Created Unreal Engine Tools using Blueprints for procedurally scattering scene assets
-- Developed shaders for magic and fire VFX
-- Directed a team of 5 in creating a VR Escape Room in Unreal Engine
-- Owned building and publishing game on [Steam](https://store.steampowered.com/app/1093750/Johns_Wizard_Dungeon/)
-
-## Contract Web Designer @ Control Laser Corporation
-- Designed web-ready assets in Adobe Illustrator and Adobe Photoshop
-- Created web pages using Wordpress, including copywriting and layout
-- Created custom carousel element for product display using wordpress platform
+- Event Director (2017 - 2018) / Vice President (2018-2019) of student organization Game Dev Knights
+   - Organized Multi-University Game Jams for 50-100 students, including securing a venue, catering, and equipment, resulting in 4 successful Game Jams over two years.
+   - Petitioned SGA and raised thousands of dollars in scholarships to send dozens of Game Dev Knights club members to the Game Developer Conference over two years
+   - Instructed classes on creating and implementing 3D assets using Maya, Substance Painter, and Unreal Engine, improving club members' classroom performance and career readiness.
 
 ***
 
-# Patents
+# Active Certifications
 
-- Method for the design and manufacture of composites having tunable physical properties
-   - USPTO 11,042,671
-   - USPTO 10,649,440
-- Deformation-based additive manufacturing optimization
-   - USPTO 11,281,186
-   - USPTO 10,838,402
+| | |
+| --- | --- |
+|![CompTIA Security + Badge](/CompTIASecurity+ce.png) | ![Autodesk Maya Certified User Badge](/MayaCertifiedUser.png) |
+| [CompTIA Security +](https://www.credly.com/badges/56c00bc3-b816-4ea7-ab74-52370cd62189/linked_in_profile) | [Autodesk Maya Certified User](https://www.credly.com/badges/3d7797e7-9f13-4b84-af87-f6ca1defdb89/linked_in_profile) |
