@@ -1,4 +1,4 @@
-[![Build Status](https://drone.tres-sims.com/api/badges/TresSims/tres-sims.com/status.svg)](https://drone.tres-sims.com/TresSims/tres-sims.com)
+[![.github/workflows/build-deploy.yml](https://github.com/TresSims/tres-sims.com/actions/workflows/build-deploy.yml/badge.svg)](https://github.com/TresSims/tres-sims.com/actions/workflows/build-deploy.yml)
 
 # The Portfolio of Tres Sims
 
