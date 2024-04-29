@@ -19,7 +19,7 @@ jobs:
         
           - name: Build
             run: | 
-               npm -i
+               npm install
                hugo
 
           - name: Deploy
