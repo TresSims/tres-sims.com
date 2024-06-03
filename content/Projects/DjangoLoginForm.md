@@ -6,13 +6,13 @@ description: "In the world of modern computing, there are many great out of the 
 ---
 
 
-In the world of modern computing, there are many great out of the box tools for handling authentication and authorization, (NextAuth)[https://next-auth.js.org/] for example. However, to make sure I understood my fundamentals, I wanted to make a login form for my portfolio project (LnkShrt)[lnkshrt.net]
+In the world of modern computing, there are many great out of the box tools for handling authentication and authorization, [NextAuth](https://next-auth.js.org/) for example. However, to make sure I understood my fundamentals, I wanted to make a login form for my portfolio project [LnkShrt](lnkshrt.net)
 
 ## The Goal
 
 As a way to keep up with the changes in modern web infrastructure, earlier this year I decided to put together a link shortening application using the NextJS, Django, and Postgres as my tech stack. It's been a fun project, and I've caught up on the tools that makes building modern web applications fun and expedient, like the awesome new app router in NextJS. But one thing I've never actually taken the time to do by hand is make a login page. 
 
-Now, I know there are lots of tools out there for implementing OAUTH and other super secure well supported (AAA)[https://en.wikipedia.org/wiki/AAA_(computer_security)] frameworks. The goal of this was for me to understand the fundamentals of what a login page should look and behave like as a developer.
+Now, I know there are lots of tools out there for implementing OAUTH and other super secure well supported [AAA](https://en.wikipedia.org/wiki/AAA_(computer_security)) frameworks. The goal of this was for me to understand the fundamentals of what a login page should look and behave like as a developer.
 
 
 This process was a bit harder than I expected, because while Django has excellent AAA tools, most of them assume that you will be using the mixin they've developed for Django's site generation tools. However, my site has a NextJS frontend, so this approach wouldn't work. So, I set out with a few goals in mind:
@@ -25,7 +25,7 @@ This process was a bit harder than I expected, because while Django has excellen
 
 ## The Backend (Django, Python)
 
-Fortunately for me, Django has lots of tools for handling AAA built into the software, though not all of them are enabled by default. So, the first step was updating my `settings.py` to enable the authentication modes I wanted to support.
+Fortunately for me, Django Rest Framework has lots of tools for handling AAA built into the software, though not all of them are enabled by default. So, the first step was updating my `settings.py` to enable the authentication modes I wanted to support.
 
 ### settings.py
 ```Python
@@ -230,11 +230,9 @@ For actually managing this logic, I used the awesome Axios, and JSCookie librari
 
 ```JavaScript
   const login = async (event) => {
-    event.preventDefault();
-
     let body = {
-      username: event.target.email.value,
-      password: event.target.pass.value,
+      username: values.username,
+      password: values.password,
     };
 
     let csrf = Cookies.get("csrftoken");
@@ -256,72 +254,51 @@ For actually managing this logic, I used the awesome Axios, and JSCookie librari
   };
 
   const signup = async (event) => {
-    event.preventDefault();
+    let csrf = Cookies.get("csrftoken");
+    var headers = {
+      headers: {
+        "X-CSRFToken": csrf,
+      },
+    };
 
-    let pass1 = event.target.pass1.value;
-    let pass2 = event.target.pass2.value;
-    let email = event.target.email.value;
+    let body = {
+      username: values.username,
+      password: values.password1,
+    };
 
-    if (pass1 == pass2) {
-      var body = {
-        username: email,
-        password: pass1,
-      };
-
-      let csrf = Cookies.get("csrftoken");
-      var headers = {
-        headers: {
-          "X-CSRFToken": csrf,
-        },
-      };
-
-      Axios.post("api/signup/", body, headers)
-        .then((response) => {
-          router.push("/login");
-          setError("");
-        })
-        .catch((error) => {
-          setError("Something went wrong, try again later");
-          console.log(error);
-        });
-    } else {
-      setError("Username and password must match");
-    }
+    Axios.post("api/signup/", body, headers)
+      .then((response) => {
+        router.push("/login");
+        setError("");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
 
   const changePassword = async (event) => {
-    event.preventDefault();
+    let body = {
+      password: values.password1,
+    };
 
-    pass1 = event.target.pass1.value;
-    pass2 = event.target.pass2.value;
-    console.log(pass1 + " " + pass2);
+    let csrf = Cookies.get("csrftoken");
+    let headers = {
+      headers: {
+        "X-CSRFToken": csrf,
+      },
+    };
 
-    if (pass1 == pass2) {
-      let body = {
-        password: pass1,
-      };
-
-      let csrf = Cookies.get("csrftoken");
-      let headers = {
-        headers: {
-          "X-CSRFToken": csrf,
-        },
-      };
-
-      Axios.post("/api/manageUser/", body, headers)
-        .then((response) => {
-          setError("");
-          Cookies.remove("loggedin");
-          router.push("/login");
-        })
-        .catch((error) => {
-          setError("Something went wrong, try again later.");
-          console.log(error);
-        });
-    } else {
-      setError("passwords must match");
-    }
+    Axios.post("/api/manageUser/", body, headers)
+      .then((response) => {
+        setError("");
+        Cookies.remove("loggedin");
+        router.push("/login");
+      })
+      .catch((error) => {
+        setError("Something went wrong, try again later.");
+        console.log(error);
+      });
   };
 
   const deleteAccount = async (event) => {
@@ -364,7 +341,164 @@ For actually managing this logic, I used the awesome Axios, and JSCookie librari
 
 ```
 
-From there, I route the application based on the `loggedin` cookie, and responses from the backend.
+From there, I route the application based on the `loggedin` cookie, and responses from 
+the backend.
+
+Additionally, to validate my form input on the frontend (even though we double check 
+this on the backend for security reasons) I implemented the Formik library, which makes 
+form creation and validation a breeze. You can see the components below. 
+
+```JavaScript
+<!-- Password change form -->
+<Formik
+	initialValues={{ password1: "", password2: "" }}
+	validate={(values) => {
+		const errors = {};
+		if (!values.password1) {
+			errors.password1 = "Requried";
+		} else if (values.password1 != values.password2) {
+			errors.password1 = "Passwords do not match";
+			errors.password2 = "Passwords do not match";
+		}
+		return errors;
+	}}
+	onSubmit={(values, { setSubmitting }) => {
+		changePassword(values);
+	}}
+>
+	{({ isSubmitting }) => (
+		<Form className="flex flex-col space-around w-full border-2 border-solid border-white rounded-md p-4">
+			<label className="text-white text-lg pb-2">Change Password</label>
+			<Field
+				type="password"
+				id="password1"
+				className="flex-grow rounded-full px-5 p-2 m-1 text-black"
+				placeholder="new password"
+			/>
+			<ErrorMessage name="password1" component="div" />
+			<Field
+				required
+				type="password"
+				id="password2"
+				className="flex-grow rounded-full px-5 p-2 m-1 text-black"
+				placeholder="confirm new password"
+			/>
+			<ErrorMessage name="password2" component="div" />
+			<button
+				type="submit"
+				className="ms-10 font-black text-white bg-orange-500 disabled:bg-gray-200 p-2 self-end hover:bg-amber-500 active:bg-amber-400 text-lg rounded-full w-48"
+			>
+				Change Password
+			</button>
+		</Form>
+	)}
+</Formik>
+```
+
+```JavaScript
+<!-- Login form -->
+<Formik
+      initialValues={{ email: "", password: "" }}
+      validate={(values) => {
+        const errors = {};
+        if (!values.email) {
+          errors.email = "Required";
+        } else if (
+          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+        ) {
+          errors.email = "Invalid email address";
+        }
+        return errors;
+      }}
+      onSubmit={(values, { setSubmitting }) => {
+        login(values);
+      }}
+    >
+      {({ isSubmitting }) => (
+        <Form className="flex flex-col space-around w-full">
+          <Field
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            className="flex-grow rounded-full px-5 p-2 m-1 text-black"
+          />
+          <ErrorMessage name="email" component="div" />
+          <Field
+            type="password"
+            name="password"
+            className="flex-grow rounded-full px-5 p-2 m-1 text-black"
+            placeholder="password"
+          />
+          <ErrorMessage name="password" component="div" />
+          <button
+            type="submit"
+            className="ms-10 font-black text-white bg-orange-500 disabled:bg-gray-200 p-2 self-end hover:bg-amber-500 active:bg-amber-400 text-lg rounded-full w-48"
+            disabled={isSubmitting}
+          >
+            Login
+          </button>
+        </Form>
+      )}
+    </Formik>
+```
+
+
+```JavaScript
+<!-- Signup form -->
+<Formik
+      initialValues={{ email: "", password1: "", password2: "" }}
+      validate={(values) => {
+        const errors = {};
+        if (!values.email) {
+          errors.email = "Required";
+        } else if (
+          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+        ) {
+          errors.email = "Invalid email address";
+        } else if (values.password1 != values.password2) {
+          errors.password1 = "Passwords do not match";
+          errors.password2 = "Passwords do not match";
+        }
+        return errors;
+      }}
+      onSubmit={(values, { setSubmitting }) => {
+        submit(values);
+      }}
+    >
+      {({ isSubmitting }) => (
+        <Form className="flex flex-col space-around w-full">
+          <Field
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            className="flex-grow rounded-full px-5 p-2 m-1 text-black"
+          />
+          <ErrorMessage name="email" component="div" />
+          <Field
+            type="password"
+            name="password1"
+            placeholder="password"
+            className="flex-grow rounded-full px-5 p-2 m-1 text-black"
+          />
+          <ErrorMessage name="password1" component="div" />
+          <Field
+            type="password"
+            name="password2"
+            placeholder="password"
+            className="flex-grow rounded-full px-5 p-2 m-1 text-black"
+          />
+          <ErrorMessage name="password2" component="div" />
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="ms-10 font-black text-white bg-orange-500 disabled:bg-gray-200 p-2 self-end hover:bg-amber-500 active:bg-amber-400 text-lg rounded-full w-48"
+          >
+            Sign-up
+          </button>
+        </Form>
+      )}
+    </Formik>
+```
 
 
 ## The logic
