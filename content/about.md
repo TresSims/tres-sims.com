@@ -4,7 +4,12 @@ date: 2023-11-15
 type: about
 ---
 
-I’m Tres Sims, a Software and Hardware technology engineer with broad integration experience.  Adept full-stack web developer using multiple industry standards including React JS, Python, Postgresql, and others.  Passionate constructor of scalable solutions for account management, helpdesk support, VR/3D integration, additive production, and network administration.  Accomplished custom mobile application developer in Java.
+Innovative and results-driven Software Engineer with a solid background in web applications and training simulations.
+Possesses three years of hands-on experience with JavaScript, Python, and C++ within the dynamic environment of
+a startup company. Skilled in server administration, containerization and documentation. Adept at collaborating with
+cross-functional teams to deliver high-quality software solutions that meet business objectives and fulfill customer
+requirements. Proven ability to thrive in fast-paced environments while continuously learning and adapting to new
+technologies and challenges.
 
 [Download My Resume](/Resume.pdf)
 
@@ -64,5 +69,5 @@ Minor, Computer Science
 
 | | |
 | --- | --- |
-|![CompTIA Security + Badge](/CompTIASecurity+ce.png) | ![Autodesk Maya Certified User Badge](/MayaCertifiedUser.png) |
-| [CompTIA Security +](https://www.credly.com/badges/56c00bc3-b816-4ea7-ab74-52370cd62189/linked_in_profile) | [Autodesk Maya Certified User](https://www.credly.com/badges/3d7797e7-9f13-4b84-af87-f6ca1defdb89/linked_in_profile) |
+|![CompTIA Security + Badge](/CompTIASecurity+ce.png) ||
+| [CompTIA Security +](https://www.credly.com/badges/56c00bc3-b816-4ea7-ab74-52370cd62189/linked_in_profile) ||
