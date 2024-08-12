@@ -3,7 +3,7 @@ title:  '"Meh": A Standalone mesh inspector, and 3MF exporter'
 date: 2022-07-05
 description: "A tool for ensuring quality and compliance of 3D files and prints"
 thumbnail: /meh/thumbnail.png
-tags: ["TechArt", "SoftwareEngineer"]
+tags: ["Tech_Art", "Software_Engineer"]
 ---
 
 As a software engineer at an additive manufacturing company, I've had the opportunity 

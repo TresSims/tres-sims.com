@@ -3,7 +3,7 @@ title: 'Compatibility Plugins for Cutting-Edge Mesh and Volume File Formats with
 date: 2022-11-10
 description: "Sometimes, being on the cutting edge means interpreting file data in a custom way."
 thumbnail: /HoudiniFileReaders/thumbnail.png
-tags: ["SoftwareEngineer", "TechArt"]
+tags: ["Software_Engineer", "Tech_Art"]
 ---
 
 During my time developing software for DASH, I occasionally found the need to write my 

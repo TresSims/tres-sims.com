@@ -4,7 +4,7 @@ date: 2024-06-28
 thumbnail: /LDTKGodot/thumbnail.png
 description: "LDTK is an awesome, open source 2D map editor developed by the creators of 
 Dead Cells, that just begs to be used in Godot projects. Here's how to get started!"
-tags: ["TechArt"]
+tags: ["Tech_Art"]
 ---
 
 ## The Goal

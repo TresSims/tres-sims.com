@@ -3,7 +3,7 @@ title: 'Writing a custom login form for SPAs with Django'
 date: 2024-05-29
 thumbnail: /DjangoLoginForm/thumbnail.png
 description: "In the world of modern computing, there are many great out of the box tools for handling authentication and authorization. However, to make sure I understood my fundamentals, I decided to custom make a login form for my portfolio project LnkShrt"
-tags: ["SoftwareEngineer"]
+tags: ["Software_Engineer"]
 ---
 
 
