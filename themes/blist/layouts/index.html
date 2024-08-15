@@ -1,0 +1,24 @@
+{{ define "main" }}
+  {{- partial "intro.html" . -}}
+  {{ range first 3 .Site.Params.bundles }}
+        {{ $bundle := . }}
+        {{ partial "content-header.html" (dict "context" . "title" $bundle) }}
+        <div class="container p-6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
+          {{ range first 6 (where $.Site.RegularPages.ByDate.Reverse "Type" $bundle)  }}
+            {{- partial "blog-card.html" . -}}
+          {{ end }}
+        </div>
+
+        {{ if gt (len (where $.Site.RegularPages.ByDate.Reverse "Type" $bundle)) 6 }}
+        <div class="text-center mb-8">
+          <a class="px-8 py-3 rounded transition-colors
+            bg-gray-900 text-gray-400 hover:text-white"
+            href="{{ (index (.Site.Menus.main) 0).URL | absLangURL }}" lang="{{ .Lang }}">
+            {{ i18n "morePosts" }}
+          </a>
+        </div>
+        {{ end }}
+  {{ end }}
+
+  {{- partial "social.html" . -}}
+{{ end }}

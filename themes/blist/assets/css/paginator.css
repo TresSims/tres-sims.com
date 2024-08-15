@@ -1,0 +1,15 @@
+.pagination {
+  @apply inline-flex border rounded px-1 border-gray-600;
+}
+.page-item {
+  @apply mx-0.5 my-1 cursor-pointer rounded hover:bg-gray-500 hover:text-white;
+}
+a.page-link {
+  @apply px-3 py-1 block;
+}
+.page-item.active {
+  @apply bg-gray-300 text-gray-900;
+}
+.page-item.disabled {
+  @apply text-gray-400 hover:bg-transparent hover:text-gray-400 cursor-not-allowed;
+}
