@@ -3,6 +3,7 @@ title: 'Houdini Engine Terrain Generator'
 date: 2023-12-04
 thumbnail: /ShatteredPlainsTerrainGenerator/thumbnail.png
 description: "A Houdini Engine tool designed to make landscapes similar to the Shattered Plains, as described by Brandon Sanderson in \"The Way of Kings\""
+tags: ["Tech_Art"]
 ---
 
 I recently finished "The Way of Kings" by Brandon Sanderson, and was really inspired by 

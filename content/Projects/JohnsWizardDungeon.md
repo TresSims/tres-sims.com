@@ -3,6 +3,7 @@ title: "John's Wizard Dungeon"
 date: 2019-05-19
 thumbnail: /WizardDungeon/thumbnail.png
 description: "A VR escape room I helped develop, and published on Steam"
+tags: ["Software_Engineer", "Tech_Art"]
 ---
 
 I am a published game developer! Wow, it feels good to be able to say that. In my final 

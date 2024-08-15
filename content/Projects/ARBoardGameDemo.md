@@ -4,6 +4,7 @@ date: 2018-12-06
 thumbnail: /ARBoardGameDemo/thumbnail.png
 description: "As a part of my senior project at UCF, I created a demo of an AR board game, 
 including all of the modeling, texturing, and a system for tiling map parts."
+tags: ["Tech_Art", "Software_Engineer"]
 ---
 
 
