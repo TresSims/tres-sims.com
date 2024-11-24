@@ -7,7 +7,7 @@ googleAnalytics = "G-EZJJXQ8M60"
 [params]
    # Basic Parameters
    introTitle = "Hey! I'm Tres Sims"
-   introSubtitle = "Software and Hardware technology engineer with broad integration experience.  Adept full-stack web developer using multiple industry standards including React JS, Python, Postgresql, and others.  Passionate constructor of scalable solutions for account management, helpdesk support, VR/3D integration, additive production, and network administration.  Accomplished custom mobile application developer in Java."
+   introSubtitle = "A motivated and detail-oriented IT Specialist with a strong background in systems administration, technology management, troubleshooting, and computer programming. An eager learner who thrives in environments where understanding and implementing cutting edge solutions is critical. Possesses strong problem-solving, analytical, and communication skills, with the ability to work effectively in collaborative environments. Strong research skills, with the ability to create action plans and thorough documentation. Eager to learn and grow while enhancing the quality of IT products and services."
    introPhoto = "/picture.jpg"
    logo = "/logo.png"
 
