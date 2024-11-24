@@ -53,3 +53,10 @@
     display: none;
   }
 }
+
+/* Scale the badge images in the certification sections to the same size */
+td {
+	img {
+		width: 256px;
+	}
+}
