@@ -4,6 +4,12 @@ title = "Tres Sims"
 theme = "blist"
 googleAnalytics = "G-EZJJXQ8M60"
 
+# The Node permission sandbox Hugo uses for PostCSS (added in v0.161.0) breaks
+# upward directory-tree resolution in browserslist and postcss-import, which
+# crashes the CSS build. Disable it since this is a trusted local build.
+[security.node.permissions]
+  disable = true
+
 [params]
    # Basic Parameters
    introTitle = "Hey! I'm Tres Sims"
